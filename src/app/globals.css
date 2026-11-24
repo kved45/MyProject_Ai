@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+:root {
+  --bg-canvas: #faf8f5;
+  --bg-surface: #efece6;
+  --bg-elevated: #ffffff;
+  --bg-obsidian: #161412;
+  --bg-obsidian-soft: #201d1a;
+
+  --ink-primary: #1a1a1a;
+  --ink-muted: #5c5852;
+  --ink-on-dark: #faf8f5;
+  --ink-on-dark-muted: #c2bcb2;
+
+  --accent-gold: #b89758;
+  --accent-gold-dark: #8c6f39;
+
+  --border-hairline: #e2ddd5;
+  --border-hairline-dark: rgba(250, 248, 245, 0.16);
+
+  --status-whatsapp: #1f6f4a;
+  --status-whatsapp-hover: #175739;
+
+  /* Default scoped project theme fallbacks */
+  --proj-canvas: #faf8f5;
+  --proj-surface: #efece6;
+  --proj-elevated: #ffffff;
+  --proj-primary: #1a1a1a;
+  --proj-primary-deep: #161412;
+  --proj-accent: #b89758;
+  --proj-accent-dark: #8c6f39;
+  --proj-ink: #1a1a1a;
+  --proj-muted: #5c5852;
+  --proj-border: #e2ddd5;
+  --proj-on-primary: #faf8f5;
+}
+
+/* Project 1 Brochure Theme: Royal Dream City-2 (Crisp White, Deep Navy, Warm Terracotta/Saffron) */
+[data-project-theme="dream-city"] {
+  --proj-canvas: #ffffff;
+  --proj-surface: #f4f6fa;
+  --proj-elevated: #ffffff;
+  --proj-primary: #1e2b4d;
+  --proj-primary-deep: #141e38;
+  --proj-accent: #e87a24;
+  --proj-accent-dark: #c45e10;
+  --proj-ink: #1e2b4d;
+  --proj-muted: #525e75;
+  --proj-border: #dce2ee;
+  --proj-on-primary: #ffffff;
+}
+
+/* Project 2 Brochure Theme: Royal Heritage (Warm Parchment Cream, Heritage Bronze, Antique Gold) */
+[data-project-theme="royal-heritage"] {
+  --proj-canvas: #faf4e8;
+  --proj-surface: #f1e7d4;
+  --proj-elevated: #fffdf9;
+  --proj-primary: #6e472b;
+  --proj-primary-deep: #4a2e1b;
+  --proj-accent: #a67c37;
+  --proj-accent-dark: #7d5b22;
+  --proj-ink: #2b1d14;
+  --proj-muted: #6a5747;
+  --proj-border: #dfd2bc;
+  --proj-on-primary: #faf4e8;
+}
+
+@theme inline {
+  --color-canvas: var(--bg-canvas);
+  --color-surface: var(--bg-surface);
+  --color-elevated: var(--bg-elevated);
+  --color-obsidian: var(--bg-obsidian);
+  --color-obsidian-soft: var(--bg-obsidian-soft);
+
+  --color-ink-primary: var(--ink-primary);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-on-dark: var(--ink-on-dark);
+  --color-ink-on-dark-muted: var(--ink-on-dark-muted);
+
+  --color-gold: var(--accent-gold);
+  --color-gold-dark: var(--accent-gold-dark);
+  --color-hairline: var(--border-hairline);
+
+  --font-serif: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+  background-color: var(--bg-canvas);
+  color: var(--ink-primary);
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--ink-primary);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main,
+section {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tabular-spec {
+  font-variant-numeric: tabular-nums;
+}
+
+.eyebrow-label {
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+::selection {
+  background-color: rgba(184, 151, 88, 0.24);
+  color: #1a1a1a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
